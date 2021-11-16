@@ -24,8 +24,7 @@ let package = Package(
             path: ".",
             exclude: [
                 "Tests",
-                "README.md",
-                "LICENSE.md"
+                "README.md"
             ],
             sources: [
                 "Sources"
