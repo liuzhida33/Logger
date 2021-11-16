@@ -21,14 +21,7 @@ let package = Package(
         .target(
             name: "Logger",
             dependencies: [],
-            path: ".",
-            exclude: [
-                "Tests",
-                "README.md"
-            ],
-            sources: [
-                "Sources"
-            ]),
+            path: "Sources"),
         .testTarget(
             name: "LoggerTests",
             dependencies: ["Logger"]),
