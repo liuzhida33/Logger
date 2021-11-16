@@ -27,40 +27,40 @@ public protocol Logger {
     func getLogLevel() -> LogLevel
 }
 
-extension Logger {
+public extension Logger {
     
     func v(_ message: @autoclosure () -> String,
-           file: String = #fileID,
-           function: String = #function,
-           line: UInt = #line) {
+                  file: String = #fileID,
+                  function: String = #function,
+                  line: UInt = #line) {
         log(message(), level: .verbose, file: file, function: function, line: line)
     }
     
     func d(_ message: @autoclosure () -> String,
-           file: String = #fileID,
-           function: String = #function,
-           line: UInt = #line) {
+                  file: String = #fileID,
+                  function: String = #function,
+                  line: UInt = #line) {
         log(message(), level: .debug, file: file, function: function, line: line)
     }
     
     func i(_ message: @autoclosure () -> String,
-           file: String = #fileID,
-           function: String = #function,
-           line: UInt = #line) {
+                  file: String = #fileID,
+                  function: String = #function,
+                  line: UInt = #line) {
         log(message(), level: .info, file: file, function: function, line: line)
     }
     
     func w(_ message: @autoclosure () -> String,
-           file: String = #fileID,
-           function: String = #function,
-           line: UInt = #line) {
+                  file: String = #fileID,
+                  function: String = #function,
+                  line: UInt = #line) {
         log(message(), level: .warning, file: file, function: function, line: line)
     }
     
     func e(_ message: @autoclosure () -> String,
-           file: String = #fileID,
-           function: String = #function,
-           line: UInt = #line) {
+                  file: String = #fileID,
+                  function: String = #function,
+                  line: UInt = #line) {
         log(message(), level: .error, file: file, function: function, line: line)
     }
 }

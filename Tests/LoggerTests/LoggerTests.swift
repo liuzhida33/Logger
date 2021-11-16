@@ -10,5 +10,6 @@ final class LoggerTests: XCTestCase {
         let logger = SimpleLogger()
         logger.setLogLevel(.verbose)
         logger.d("测试")
+        logger.v("测试")
     }
 }
